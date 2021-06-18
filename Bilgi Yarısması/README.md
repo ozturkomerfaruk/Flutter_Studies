@@ -1,16 +1,23 @@
-# bilgi_yarismasi
+# bilgi yarışması
 
-A new Flutter application.
+Sfaffold body kısmına SafeArea tanımlandı. child kısmına ise SoruSayfası(),
 
-## Getting Started
+SoruSayfası bir statefulWidget tır.
 
-This project is a starting point for a Flutter application.
+En başta içi boş bir list tutuldu. ve Testveri sınıfından bir obje oluşturuldu.
 
-A few resources to get you started if this is your first Flutter project:
+Test veri içerisinde 7 tane soru bulunmaktadır. Bu sorular private olarak oluşturulmuştur. Listeye uzaktan ulaşmak için listi get set etmek yerine, onun sorusunu, cevabını ayrı ayrı get set yapılmıştır.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Örneğin String getSoruMetni() => return _SoruBankasi[_soruIndex].sorulanSoru; şeklindedir.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+getVerilenyanit(), getSoruSayisi(), getSoruIndex(), SonrakiSoru(), TestBittiMi(), TestBittiktenSonra() metotları oluşturulmuştur.
+
+Daha sonra main.dart'a geri dönecek olursak, IconEkeleme yapabilmemiz için her bir doğru cevabın ardından bir metot eklenmiştir.
+
+Bu Iconları ekleyebilmesi için constants.dart oluşturulmuştur.
+
+Buton görevini yapabilmesi için ayrı bir bool parametreli metot oluşturulmuştur.
+
+Testi bitirdikten sonra bir uyarı ekranı çıkarmıştır. Bu görevi yapan **AlertDialog** idir.
+
+Daha sonra normal UI kısmı ayarlanmıştır.
